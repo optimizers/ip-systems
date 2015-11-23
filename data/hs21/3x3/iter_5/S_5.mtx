@@ -1,0 +1,8 @@
+%%MatrixMarket matrix coordinate real general
+% file created by pysparse module
+5 5 5
+1 1 1.001162848380437e+00
+2 2 1.124139636920818e-03
+3 3 4.999960649791138e+01
+4 4 4.799888583633285e+01
+5 5 5.000040293200249e+01
