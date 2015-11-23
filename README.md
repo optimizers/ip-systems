@@ -1,5 +1,7 @@
 # Interior-Point Systems
 
+[![DOI](https://zenodo.org/badge/11670/optimizers/ip-systems.svg)](https://zenodo.org/badge/latestdoi/11670/optimizers/ip-systems)
+
 This repository contains a collection of linear systems arising from
 interior-point methods for quadratic optimization in
 [MatrixMarket](http://math.nist.gov/MatrixMarket/formats.html#MMformat) format.
