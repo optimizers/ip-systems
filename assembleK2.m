@@ -1,14 +1,14 @@
-function [K, P, nz, rhs] = assembleK2(itnumber, varargin)
+function [K, P, n, m, ns, nz, rhs] = assembleK2(itnumber, varargin)
   % Assemble
-  %      [ H + rho*I + X^{-1} Z     J'     ]
-  % K2 = [         J              -delta*I ]
+  %      [ H + rho*I + X^{-1} Z     J'     ] } n + ns
+  % K2 = [         J              -delta*I ] } m
   %
   % and return the corresponding right-hand side and a preconditioner P.
   %
-  % `[K, P, rhs] = assembleK2(itnumber)`
+  % `[K, P, n, m, ns, nz, rhs] = assembleK2(itnumber)`
   %   returns P = I.
   %
-  % `[K, P, rhs] = assembleK2(itnumber, precon, arg1, ..., argN)`
+  % `[K, P, n, m, ns, nz, rhs] = assembleK2(itnumber, precon, arg1, ..., argN)`
   %   calls `precon(rho, delta, H, J, Z, X, arg1, ..., argN). The
   %   function `precon()` should return an appropriate preconditioner
   %   for K2.

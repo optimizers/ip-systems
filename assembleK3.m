@@ -1,8 +1,8 @@
-function [K, P, nz, rhs] = assembleK3(itnumber, varargin)
+function [K, P, n, m, ns, nz, rhs] = assembleK3(itnumber, varargin)
   % Assemble
-  %      [ H + rho*I     J'    -I ]
-  % K3 = [     J     -delta*I     ]
-  %      [     Z                X ]
+  %      [ H + rho*I     J'    -I ] } n
+  % K3 = [     J     -delta*I     ] } m
+  %      [     Z                X ] } ns
   %
   % and return the corresponding right-hand side and a preconditioner P.
   %
