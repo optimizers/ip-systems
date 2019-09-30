@@ -19,8 +19,9 @@ function [K, P, nz, rhs] = assembleK2(itnumber, varargin)
   ns = size(Z, 1);      % Number of slack variables.
   n = size(H, 1) - ns;  % Number of original variables.
 
-  K = [ H + tril(H,-1)' + Z' * (X \ Z)      J'                ; ...
-        J                                  -delta * speye(m) ];
+  XinvZ = Z' * (X \ Z) + rho * speye(size(Z, 2));
+  K = [ H + tril(H,-1)' + XinvZ      J'                ; ...
+        J                           -delta * speye(m) ];
 
   % Reduce right-hand side.
   rhs(1:n+ns) = rhs(1:n+ns) - Z' * (X \ rhs(n+ns+m+1:n+ns+m+ns));
